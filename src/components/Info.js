@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { GithubContext } from '../context/context';
 import styled from 'styled-components';
 import { GoRepo, GoGist } from 'react-icons/go';
 import { FiUsers, FiUserPlus } from 'react-icons/fi';
 
 const UserInfo = () => {
-  return <h2>user info component</h2>;
+  const data = useContext(GithubContext)
+  const {public_repos, followers, following, }
+  return (
+    <h2>user info comp</h2>
+  )
 };
 
 const Wrapper = styled.section`
