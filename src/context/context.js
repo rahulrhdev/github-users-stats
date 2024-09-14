@@ -27,7 +27,6 @@ const GithubProvider = ({ children }) => {
     );
 
     if (response) {
-      console.log(response, "response1");
       const { login, followers_url } = response.data;
       setGithubUser(response.data);
       await Promise.allSettled([
