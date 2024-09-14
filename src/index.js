@@ -8,14 +8,13 @@ import { Auth0Provider } from "@auth0/auth0-react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-console.log(process.env.REACT_APP_ROOT_DOMAIN, process.env.REACT_APP_CLIENT_ID, 'index')
-
 root.render(
   <React.StrictMode>
     <Auth0Provider
       domain={process.env.REACT_APP_ROOT_DOMAIN}
       clientId={process.env.REACT_APP_CLIENT_ID}
       redirectUri={window.location.origin}
+      cacheLocation='localstorage'
     >
       <GithubProvider>
         <App />
